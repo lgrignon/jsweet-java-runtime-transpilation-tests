@@ -1,0 +1,12 @@
+/.idea/
+/node_modules/
+/packaging/jsweet-candy/target/
+/backup/
+/.jsweet/
+/target/
+/src/main/resources/META-INF/resources/
+/dist/node
+.settings/
+.classpath
+.project
+/bin/
