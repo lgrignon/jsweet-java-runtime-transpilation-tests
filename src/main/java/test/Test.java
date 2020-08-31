@@ -9,9 +9,11 @@ import static javaoverride.util.Arrays.asList;
 import static jsweet.util.Lang.any;
 
 import def.dom.HTMLElement;
+import javaemul.internal.CharSequenceHelper;
 import javaoverride.io.ByteArrayInputStream;
 import javaoverride.io.IOException;
 import javaoverride.text.Collator;
+import javaoverride.lang.StringBuilder;
 import javaoverride.util.ArrayList;
 import javaoverride.util.Arrays;
 import javaoverride.util.BitSet;
@@ -281,7 +283,7 @@ public class Test {
 		sb.append("test");
 		sb.deleteCharAt(sb.length() - 1);
 		assertEquals("truectes", sb.toString());
-		sb.append("abc", 0, 1);
+		sb.append(CharSequenceHelper.castToOverride("abc"), 0, 1);
 		assertEquals("truectesa", sb.toString());
 		StringBuffer sb2 = new StringBuffer();
 		sb2.append(true);

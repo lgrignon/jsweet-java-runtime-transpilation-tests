@@ -27,7 +27,7 @@ public interface CharSequence {
 
   int length();
 
-  CharSequence subSequence(int start, int end);
+  String subSequence(int start, int end);
 
   @Override
   String toString();

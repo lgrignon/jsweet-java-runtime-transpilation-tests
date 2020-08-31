@@ -12,5 +12,5 @@ mvn clean generate-sources
 ## Run
 
 ```
-node 
+node target/bundle.js
 ```

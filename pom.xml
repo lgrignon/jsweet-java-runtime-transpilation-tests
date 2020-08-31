@@ -68,7 +68,7 @@
 					<bundle>true</bundle>
 					<module>none</module>
 					<declaration>true</declaration>
-					<outDir>target/ts</outDir>
+					<outDir>target</outDir>
 					<dtsOut>target/typings</dtsOut>
 					<targetVersion>ES6</targetVersion>
 					<usingJavaRuntime>true</usingJavaRuntime>

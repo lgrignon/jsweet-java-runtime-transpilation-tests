@@ -89,8 +89,8 @@ abstract class AbstractStringBuilder {
     replace0(index, index + 1, String.valueOf(x));
   }
 
-  public CharSequence subSequence(int start, int end) {
-    return CharSequenceHelper.castToOverride(string.substring(start, end));
+  public String subSequence(int start, int end) {
+    return string.substring(start, end);
   }
 
   public String substring(int begin) {
@@ -123,10 +123,8 @@ abstract class AbstractStringBuilder {
   }
 
   void append0(CharSequence x, int start, int end) {
-    if (x == null) {
-      x = CharSequenceHelper.castToOverride("null");
-    }
-    string += x.subSequence(start, end);
+      String xx = x == null ? "null": x.toString();
+    string += xx.subSequence(start, end);
   }
 
   void appendCodePoint0(int x) {
@@ -162,5 +160,5 @@ abstract class AbstractStringBuilder {
     char tmp = buffer[f];
     buffer[f] = buffer[s];
     buffer[s] = tmp;
-  }
+}
 }
