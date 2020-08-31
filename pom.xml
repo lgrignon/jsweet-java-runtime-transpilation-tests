@@ -5,8 +5,13 @@
 	<groupId>org.jsweet</groupId>
 	<artifactId>j4ts-java-sources</artifactId>
 	<version>0.7.0-SNAPSHOT</version>
+
 	<properties>
-		<jsweet.transpiler.version>2.4.0-SNAPSHOT</jsweet.transpiler.version>
+		<jsweet.transpiler.version>3.0.0-SNAPSHOT</jsweet.transpiler.version>
+		<jsweet.core.version>6.2.0</jsweet.core.version>
+		<java.version.release>11</java.version.release>
+		<java.version>1.${java.version.release}</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<licenses>
 		<license>
@@ -51,11 +56,13 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<fork>true</fork>
+					<release>${java.version.release}</release>
+					<compilerVersion>${java.version}</compilerVersion>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -160,7 +167,7 @@
 		<dependency>
 			<groupId>org.jsweet</groupId>
 			<artifactId>jsweet-core</artifactId>
-			<version>6.0.3</version>
+			<version>${jsweet.core.version}</version>
 			<scope>compile</scope>
 		</dependency>
 

@@ -243,7 +243,7 @@ public class ByteBuffer extends Buffer implements Comparable<ByteBuffer> {
 		if (position() == limit())
 			throw new BufferOverflowException();
 
-		_array.$set(position(), b);
+		_array.$set(position() + "", b);
 		position(position() + 1);
 		return this;
 	}
@@ -272,7 +272,7 @@ public class ByteBuffer extends Buffer implements Comparable<ByteBuffer> {
 		if (to < 0 || to > limit())
 			throw new IndexOutOfBoundsException();
 
-		_array.$set(to, b);
+		_array.$set(to + "", b);
 		return this;
 	}
 
