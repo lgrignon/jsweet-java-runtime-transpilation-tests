@@ -156,8 +156,8 @@ public final class Class<T> implements Type {
 		return getConstructorForClass(clazz).prototype;
 	};
 
-	public static <T> Class<T> castToOverride(java.lang.Class<T> clazz) {
-		return (Class) (java.lang.Object) clazz;
+	public static <T> Class<T> castToOverride(Object langClazz) {
+		return (Class) (java.lang.Object) langClazz;
 	}
 
 	/**

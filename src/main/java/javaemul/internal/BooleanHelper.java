@@ -18,6 +18,7 @@ package javaemul.internal;
 import static javaemul.internal.InternalPreconditions.checkNotNull;
 
 import javaoverride.io.Serializable;
+import javaoverride.lang.Class;
 import jsweet.lang.Erased;
 
 /**
@@ -30,7 +31,7 @@ public final class BooleanHelper implements Comparable<BooleanHelper>, Serializa
 	public static final Boolean FALSE = false;
 	public static final Boolean TRUE = true;
 
-	public static final Class<Boolean> TYPE = Boolean.class;
+	public static final Class<Boolean> TYPE = Class.castToOverride(Boolean.class);
 
 	public static int compare(boolean x, boolean y) {
 		return (x == y) ? 0 : (x ? 1 : -1);

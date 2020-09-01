@@ -9,6 +9,7 @@ import javaoverride.lang.System;
 
 import static def.js.Globals.eval;
 import static jsweet.util.Lang.*;
+import javaoverride.lang.Class;
 
 public class InternalJsURLFactory {
     static final Function jsURLCtor = getJsURLConstructor();
@@ -18,7 +19,7 @@ public class InternalJsURLFactory {
         if (System.ENVIRONMENT_IS_NODE) {
             URLConstructor = eval("global.URL || (global.URL = require(\"url\").URL)");
         } else if (System.ENVIRONMENT_IS_SHELL) {
-            Class<InternalJsURLForShell> internalJsURLForShellClass = InternalJsURLForShell.class;
+            Class<InternalJsURLForShell> internalJsURLForShellClass = Class.castToOverride(InternalJsURLForShell.class);
             URLConstructor = eval("this.URL || (this.URL = internalJsURLForShellClass)");
         } else {
             URLConstructor = (Function) function((Supplier<Object>)() -> eval("URL")).call(null);

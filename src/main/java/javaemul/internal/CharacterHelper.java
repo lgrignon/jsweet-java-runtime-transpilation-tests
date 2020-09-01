@@ -23,6 +23,7 @@ import jsweet.lang.Erased;
 import def.js.RegExp;
 import def.js.RegExpMatchArray;
 import javaoverride.io.Serializable;
+import javaoverride.lang.Class;
 
 /**
  * Wraps a native <code>char</code> as an object.
@@ -80,7 +81,7 @@ public final class CharacterHelper implements Comparable<CharacterHelper>, Seria
 		private static Character[] boxedValues = new Character[128];
 	}
 
-	public static final Class<Character> TYPE = Character.class;
+	public static final Class<Character> TYPE = Class.castToOverride(Character.class);
 	public static final int MIN_RADIX = 2;
 
 	public static final int MAX_RADIX = 36;
