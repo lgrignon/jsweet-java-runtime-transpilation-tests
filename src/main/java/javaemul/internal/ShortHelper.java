@@ -16,6 +16,7 @@
 package javaemul.internal;
 
 import jsweet.lang.Erased;
+import javaoverride.lang.Class;
 
 /**
  * Wraps a primitive <code>short</code> as an object.
@@ -28,7 +29,7 @@ public final class ShortHelper extends NumberHelper implements Comparable<ShortH
 	public static final short MIN_VALUE = (short) 0x8000;
 	public static final short MAX_VALUE = (short) 0x7fff;
 	public static final int SIZE = 16;
-	public static final Class<Short> TYPE = Short.class;
+	public static final Class<Short> TYPE = Class.castToOverride(Short.class);
 
 	/**
 	 * Use nested class to avoid clinit on outer.
