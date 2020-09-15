@@ -22,7 +22,6 @@ package javaoverride.util;
  *
  * @param <T> the type to be compared.
  */
-@FunctionalInterface
 public interface Comparator<T> {
   int compare(T a, T b);
 

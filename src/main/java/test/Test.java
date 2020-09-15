@@ -67,6 +67,8 @@ public class Test {
 
 	public static void test() {
 		try {
+		    System.out.println("starting...");
+		    
 			testArrays();
 			testList();
 			testMap();

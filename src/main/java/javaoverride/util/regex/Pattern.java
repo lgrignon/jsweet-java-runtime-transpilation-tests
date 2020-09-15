@@ -131,7 +131,7 @@ public class Pattern implements Serializable {
                             ")+\\]" +
                         ")*)", "g"), Lang.<Supplier<def.js.String>> any((Function<def.js.String[], def.js.String>)
                         ((def.js.String ... args) -> {
-                            if (args[2] == undefined || args[2].length == 0) {
+                            if (!def.js.Array.isArray(args) || args[2] == undefined || args[2].length == 0) {
                                 return args[1];
                             }
 
