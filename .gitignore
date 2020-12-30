@@ -1,4 +1,5 @@
 /.idea/
+*.class
 /node_modules/
 /packaging/jsweet-candy/target/
 /backup/
